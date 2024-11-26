@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import { pizzaData } from "./data.js";
 
 function App() {
   return (
@@ -48,9 +49,9 @@ function Footer() {
 function Pizza() {
   return (
     <div>
-      <img src="pizzas/spinaci.jpg" alt="Pizza Spinaci" />
-      <h3>Pizza Spinaci</h3>
-      <p>Tomato, mozarella, spinach, and ricotta cheese</p>
+      <img src={pizzaData[2].photoName} alt={pizzaData[2].name} />
+      <h3>{pizzaData[2].name}</h3>
+      <p>{pizzaData[2].ingredients}</p>
     </div>
   );
 }
